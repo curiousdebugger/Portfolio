@@ -11,9 +11,12 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_3fjfb17', 'template_ky1ucaz', form.current, 'user_641J0AWGxx4qcKi835yDq')
-
+    // emailjs.sendForm('service_2v15j9m', 'template_4yxyzyw', form.current, '5ehRri7yhdkLOSfwr')
+    emailjs.send("service_2v15j9m","template_4yxyzyw",{
+      from_name: form.current[1].value,
+      message: form.current[2].value,
+    },'5ehRri7yhdkLOSfwr');
+    
     e.target.reset()
   };
 
@@ -27,8 +30,8 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className='contact__option-icon'/>
             <h4>Email</h4>
-            <h5>dummyegator@gmail.com</h5>
-            <a href="mailto:dummyegator@gmail.com" target="_blank">Send a message</a>
+            <h5>kshitij.rangari92@gmail.com</h5>
+            <a href="kshitij.rangari92@gmail.com" target="_blank">Send a message</a>
           </article>
           <article className="contact__option">
             <RiMessengerLine className='contact__option-icon'/>
